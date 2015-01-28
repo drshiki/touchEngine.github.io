@@ -45,13 +45,13 @@ position :absolute;
 #second_containter{
 	position : relative;
 	width : 750px;
-	height : 550px;
+	height : 700px;
 	background: url("src/index_right.png");
 	background-color : aquamarine;
 	background-repeat : no-repeat;
 	background-position: right;
 	left  : 200px
-	padding-bottom : 120px;
+
 }
 
 #d1, #d2, #d3, #d4, #d5 {
