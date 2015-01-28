@@ -39,7 +39,7 @@ position :absolute;
 }
 
 #second_containter{
-	position : relative;
+	position : absolute;
 	width : 750px;
 	height : 550px;
 	background: url("src/index_right.png");
