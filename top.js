@@ -1,7 +1,7 @@
 document.write("\
 <html>\
 <head>\
-<title>¦ä(£þ¦á£þ)¦äWelcome to Dam's page</title>\
+<title>Welcome to Dam's page</title>\
 <script type = \"text/javascript\" language=\"javascript\" src = \"fun.js\"> </script>\
 <link rel = stylesheet type = \"text/css\" href = \"index.css\"/>\
 </head>\
