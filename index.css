@@ -51,7 +51,7 @@ position :absolute;
 	background-repeat : no-repeat;
 	background-position: right;
 	left  : 200px
-
+	padding-bottom : 120px;
 }
 
 #d1, #d2, #d3, #d4, #d5 {
