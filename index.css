@@ -17,7 +17,7 @@ position :absolute;
 	font-family : Trebuchet MS;
 }
 
-#comment_area_1, #comment_area_2 {
+#comment_area_2 {
 	position :relative;
 	padding-top : 150px;
 	width : 600px;
