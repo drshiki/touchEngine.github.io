@@ -19,6 +19,7 @@ position :absolute;
 
 #comment_area_1, #comment_area_2 {
 	position :relative;
+	padding-top : 150px;
 	width : 600px;
 	left : 300px;
 }
@@ -68,7 +69,7 @@ position :absolute;
 	width : 350px;
 	height : 200px;
 	left  : 500px;
-	top : 150px;
+	top : 40px;
 	text-align :center;
 }
 
