@@ -34,7 +34,6 @@ position :absolute;
 }
 
 #comment_area_2 {
-	padding-top : 100px;
 	width : 600px;
 }
 #body_style{
@@ -52,6 +51,7 @@ position :absolute;
 	background-repeat : no-repeat;
 	background-position: right;
 	left  : 200px
+	padding-bottom : 100px;
 }
 
 #d1, #d2, #d3, #d4, #d5 {
