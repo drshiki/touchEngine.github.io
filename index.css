@@ -45,7 +45,7 @@ position :absolute;
 	background: url("src/index_right.png");
 	background-color : aquamarine;
 	background-repeat : no-repeat;
-	background-position: center;
+	background-position: right;
 	left  : 200px
 }
 
