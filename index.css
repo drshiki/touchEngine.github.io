@@ -28,7 +28,7 @@ position :absolute;
 }
 
 #first_containter {
-	padding-bottom : 150px;
+	padding-bottom : 50px;
 }
 #body_style{
 	background-color : aquamarine;
@@ -70,7 +70,7 @@ position :absolute;
 	color : blue;
 	font-size : 13px;
 	font-family : Times New Roman;
-	position : relative;
+	position : absolute;
 	left :40px;
 	margin-top : 70px;
 	text-align : center;
