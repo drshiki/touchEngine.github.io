@@ -18,7 +18,7 @@ position :absolute;
 }
 
 #comment_area_1, #comment_area_2 {
-	position :absolute;
+	position :relative;
 	width : 600px;
 	left : 300px;
 }
