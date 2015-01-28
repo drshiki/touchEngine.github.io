@@ -27,6 +27,9 @@ position :absolute;
 	top : 0px;
 }
 
+#first_containter {
+	padding-bottom : 150px;
+}
 #body_style{
 	background-color : aquamarine;
 	background-image : url("src/bg.png");
@@ -67,7 +70,7 @@ position :absolute;
 	color : blue;
 	font-size : 13px;
 	font-family : Times New Roman;
-	position : absolute;
+	position : relative;
 	left :40px;
 	margin-top : 70px;
 	text-align : center;
