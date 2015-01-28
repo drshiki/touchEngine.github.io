@@ -34,8 +34,8 @@ position :absolute;
 }
 
 #comment_area_2 {
+	padding-top : 100px;
 	width : 600px;
-	align : center;
 }
 #body_style{
 	background-color : aquamarine;
