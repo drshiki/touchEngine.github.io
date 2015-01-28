@@ -18,8 +18,7 @@ position :absolute;
 }
 
 #comment_area_2 {
-	position :relative;
-	padding-top : 150px;
+
 	width : 600px;
 	left : 300px;
 }
