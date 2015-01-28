@@ -32,6 +32,11 @@ position :absolute;
 #first_containter {
 	padding-bottom : 5px;
 }
+
+#comment_area_2 {
+	width : 600px;
+	align : center;
+}
 #body_style{
 	background-color : aquamarine;
 	background-image : url("src/bg.png");
