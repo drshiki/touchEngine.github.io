@@ -1,0 +1,91 @@
+.search_button{
+position :absolute;
+	left :1200px;
+	top :50px;
+	height : 24px; 
+}
+
+.search_box{
+	position :absolute;
+	left :1030px;
+	top :50px;
+	padding : 2px 6px;
+	width : 150px; 
+	height : 24px; 
+	border : 0;
+	font-size :13px;
+	font-family : Trebuchet MS;
+}
+#head_pic {
+	margin-top : 0px;
+	position :relative;
+	width : 400px;
+	height : 130px;
+	background-image : url("src/bg_word1.gif");
+	background-repeat : no-repeat;
+	left : 500px;
+	top : 0px;
+}
+
+#body_style{
+	background-color : aquamarine;
+	background-image : url("src/bg.png");
+	background-repeat :no-repeat;
+}
+
+#second_containter{
+	position : relative;
+	width : 750px;
+	height : 550px;
+	background: url("src/index_right.png");
+	background-color : aquamarine;
+	background-repeat : no-repeat;
+	background-position: right;
+	left  : 200px
+}
+
+#d1, #d2, #d3, #d4, #d5 {
+	font-size : 14ps;
+	font-family : Arial Black;
+	color : black;
+	text-decoration : none;
+	font-style : italic;
+}
+
+#foot {
+	background-image : url("src/separator.gif");
+	background-repeat : no-repeat;
+	position : relative;
+	width : 350px;
+	height : 200px;
+	left  : 500px;
+	top : 150px;
+	text-align :center;
+}
+
+#foot_p {
+	color : blue;
+	font-size : 13px;
+	font-family : Times New Roman;
+	position : absolute;
+	left :40px;
+	margin-top : 70px;
+	text-align : center;
+	line-height : 30px;
+}
+
+a#foot_a {
+	align : center;	
+	color : blue;
+	font-size : 13px;
+	font-family : Times New Roman;
+	text-decoration : none;
+}
+
+#normal_second_containter{
+	position : relative;
+	width : 750px;
+	height : 550px;
+	background-color : aquamarine;
+	left  : 200px
+}
