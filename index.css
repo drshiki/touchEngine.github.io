@@ -18,6 +18,7 @@ position :absolute;
 }
 
 #comment_area_1, #comment_area_2 {
+	position :absolute;
 	width : 600px;
 	left : 300px;
 }
@@ -33,7 +34,7 @@ position :absolute;
 }
 
 #first_containter {
-	padding-bottom : 10px;
+	padding-bottom : 5px;
 }
 #body_style{
 	background-color : aquamarine;
