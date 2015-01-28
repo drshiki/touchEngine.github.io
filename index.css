@@ -18,7 +18,8 @@ position :absolute;
 }
 
 #comment_area_1, #comment_area_2 {
-	width : 300px;
+	width : 600px;
+	left : 300px;
 }
 #head_pic {
 	margin-top : 0px;
