@@ -1,4 +1,4 @@
-function google_search(id){
+﻿function google_search(id){
 	this.content = document.getElementById(id).value;
 	if (this.content != "") {
 		this.search = "http://118.174.27.112/#newwindow=1&q="+this.content;

@@ -1,4 +1,4 @@
-document.write("\
+﻿document.write("\
 </div>\
 <center>\
 <div  id = \"comment_area_2\">\

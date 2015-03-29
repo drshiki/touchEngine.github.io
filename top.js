@@ -1,4 +1,4 @@
-document.write("\
+﻿document.write("\
 <html>\
 <head>\
 <title>Welcome to Dam's page</title>\
