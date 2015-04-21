@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Robin Hood</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Robin Hood(2010) Director's Cut</h1>
+<p><img src="1.jpg" /></p>
+<p>I spent a afternoon on Thu with <em>Robin Hood</em> thie week. If you are a man being addicted to cool weapon, and this film is worth watching. But it maybe make you disappointed if you expect to find a story about a superhero in it, I mean it is not just a superhero film but from my point it is more like a history theme film though lack of the necessary seriousness. Thus if you are interested with the Middle Ages history or cool weapon, and you want to spend after-lunch time, it is always suited. Warning again, it is not a superhero film.</p>
+<h2>The MovieClip</h2>
+<p>Following I will talk about the movieclip in short. Merely a simplified version for the poins of this review cared.</p>
+<p>The film bigins With the cartoon pictures showing the man runing. </p>
+<p><img src="2.jpg" /></p>
+<p>Then the man be a eagle, is it a eagle? In order to comfirm what it is I watch those pictures many times, but yet don't sure that.</p>
+<p><img src="3.jpg" /></p>
+<p>I don't know what it means, is it represent freedom? or other meanings? watched this film I think it is possibly symbolize the freedom, reason that magna carter. Many puzzles relate to begaining so the open is terrible for me. Let's go to next, and there are some words to expain the era and the outlaw. The open speech is also redundant. I am not willing to talk about this to make in harangue. And we over the film and come the ending, ending clips show french killed the English and the army shipping.</p>
+<p><img src="5.jpg" /></p>
+<p><img src="6.jpg" /></p>
+<p><img src="7.jpg" /></p>
+<p>It is no sense for a superhero film, isn't it? The movie name misleads me to regard it to be a superhero film, obviously, it is inappropriate.</p>
+<h2>The Soundtracks</h2>
+<p>There are only two pieces of music impress me.</p>
+<p>The 1st is <a href="">here</a></p>
+<p>The 2nd is <a href="">here</a></p>
+<h2>The History</h2>
+<p>I am unable to hold myself back to write down the history related to this film. In fact I am a complete historical fan therefore historical films always are interesting for me. So that its name is unsuitable but I recommend it as a history film for you though it is something wrong to the facts in history. I refer someone‘s blog， wiki and go to library looking for some reference books, finally find out few books. The library in my school seems poor in book-collection. </p>
+<h3>About Lion-Heart</h3>
+<p>The Lion-Heart Richard Ⅰ was born in England in 1157, he took the crown in his last ten years, his father is Henry Ⅱ and he is Honry's second son, he got throne through tow main rebellions. He spent about four months to pacify England, then he made the third Crusades with other two monarches Philip II and Barbarossa, the Lion-Heart and Saladin reached an accommodation in this war, at the same time, his little brother John the next monarch of England was incited to invade his land, he led the army come back to England but unfortunately he was caught by the new emperor of Holy Roman Empire Henry Ⅱ, He stayed in Holy Roman Empire more than a year, and in 1194 he arrived his country and spent about tow months to rule the political scene. In his last five years he combated in France and won a number of victories. The Lion-Heart died in 1199 but he was only 42 years old. Those are the brief of his life. According to the Lion-Heart's life time, we know that he always is a good fighter but never a qualified king. He was the most skilful in battle in all kings of European countries in Middle Age. the statue of the Lion-Heart stands there in front of The houses of parliament in London still.</p>
+<h3>Magna Carta</h3>
+<p>The film says that Robin Hood's father sponsored the movement of the Magna Carta, I could not find out any evidence to hold that, but actually at Jun 15, 1215, nobles forced king John to sign the magna carta the most inportant official document of political history of England, later all kings ruled their behaviors by this offical document.</p>
+<h2>My Speak</h2>
+<p>Not any more about this film, I haven't watched other Rid's works, and even if I saw the <em>Black Hawk Down</em> I didn't finish. From people's comments, I guess that Rid is good at expressing the great scene but not a hero a personality. So the <em>Robin Hood</em> is more like a historical film. I recommend it if you have free time and you are fond of history as me. </p>
+<p>Before I write it I want to write down all my think, now I think it is such hard work. Those such as the Crusades, White horse statue of Alton Barnes, and detailed life of Lion-heart and Magna Carta. But this essay has token my four days. Don't want any more. </p>
+<p>written in Apr, 21 2015 17 : 28</p>
+	<center>
+	<div  id = "comment_area_2">
+	    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'damhjame'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+	</center>
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
