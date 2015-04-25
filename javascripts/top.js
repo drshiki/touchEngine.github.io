@@ -2,8 +2,8 @@
 <html>\
 <head>\
 <title>Welcome to this page</title>\
-<script type = \"text/javascript\" language=\"javascript\" src = \"fun.js\"> </script>\
-<link rel = stylesheet type = \"text/css\" href = \"index.css\"/>\
+<script type = \"text/javascript\" language=\"javascript\" src = \"./javascripts/fun.js\"> </script>\
+<link rel = stylesheet type = \"text/css\" href = \"./stylesheets/index.css\"/>\
 </head>\
 <body id = \"body_style\">\
 <div id = \"first_containter\">\

@@ -23,7 +23,7 @@ position :absolute;
 	position :relative;
 	width : 400px;
 	height : 130px;
-	background-image : url("src/bg_word1.gif");
+	background-image : url("../images/bg_word1.gif");
 	background-repeat : no-repeat;
 	left : 500px;
 	top : 0px;
@@ -39,7 +39,7 @@ position :absolute;
 }
 #body_style{
 	background-color : aquamarine;
-	background-image : url("src/bg.png");
+	background-image : url("../images/bg.png");
 	background-repeat :no-repeat;
 }
 
@@ -47,7 +47,7 @@ position :absolute;
 	position : relative;
 	width : 750px;
 	height : 550px;
-	background: url("src/index_right.png");
+	background: url("../images/index_right.png");
 	background-color : aquamarine;
 	background-repeat : no-repeat;
 	background-position: right;
@@ -63,7 +63,7 @@ position :absolute;
 }
 
 #foot {
-	background-image : url("src/separator.gif");
+	background-image : url("../images/separator.gif");
 	background-repeat : no-repeat;
 	position : relative;
 	width : 350px;
