@@ -4,14 +4,6 @@
 <title>Little Algorithmer -Dam's Notes</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
-/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
-/* Author: Nicolas Hery - http://nicolashery.com */
-/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
-/* Source: https://github.com/nicolahery/markdownpad-github */
-
-/* RESET
-=============================================================================*/
-
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -289,21 +281,22 @@ img {
   max-width: 100%
 }
 </style>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 </head>
 <body>
-<p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script></p>
 <h1>Little Algorithmer -Dam's Notes</h1>
-<p>＼[J<em>\alpha(x) = \sum</em>{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}＼]</p>
-<h3>Asymptotic notation</h3>
-<p>I intend to explain three kinds of asymptotic notation including Θ,Ο,Ω. Following will diplay both informalized definition and formalized definition. Those such as ω-notation or ο-notation will be added in some days ahead.	</p>
-<p><strong>These asymptotic notations aren't dedicateds of algorithm complexity but applies to functions.</strong></p>
-<p>For example, the worst-case run time of insertion sort was T(n) = ax^2 + bx + c, then this function can be writting as Θ(n^2), hence Θ(n^2) can characterize the worst-case run time of insertion sort.</p>
+<h4>Asymptotic notation</h4>
+<p>I intend to explain three kinds of asymptotic notation including \(\Theta,O,\Omega\). Following will diplay both informalized definition and formalized definition. Those such as \(\omega\)-notation or \(\omicron\)-notation will be added in some days ahead.	</p>
+<p><strong>These asymptotic notations aren't  privileges of algorithm complexity but apply to functions.</strong></p>
+<p>For example, the worst-case run time of insertion sort was \(T(n) = ax^2 + bx + c\), then this function can be writting as \(\Theta(n^2)\), hence \(\Theta(n^2)\) can characterize the worst-case run time of insertion sort.</p>
 <h3>How to count the run time of an algorithm</h3>
 <p>Let's see some specific case :</p>
 <p>This an insertion sort algorithm in c like programming language.</p>
-<p><em>n is input size of this case</em></p>
-<p><em>ci is the executing cost of line i</em></p>
-<p><em>ti is executing times of in each different value i</em></p>
+<p><em><strong>n</strong> is input size of this case</em></p>
+<p><em>\(c_i\) is the executing cost of line i</em></p>
+<p><em>\(t_i\) is executing times of in each different value i</em></p>
+<p><em><strong>T(n)</strong> is the total time of this insertion sort</em></p>
 <pre><code>0                                           cost    times
 1   int i = 1;                              c1      1
 2   for (; i &lt; n;) {                        c2      n
@@ -318,6 +311,20 @@ img {
 11  }                                       c11     n-1
 </code></pre>
 
+<p>\[T(n)=c_1+c_2n+c_3(n-1)+c_4(n-1)+c_5\sum_{i=1}^{n-1}t_i+c_6\sum_{i=1}^{n-1}(t_i-1)+c_7\sum_{i=1}^{n-1}(t_i-1)+c_8(n-1)+c_9(n-1)+c_{10}(n-1)+c_{11}(n-1)\]</p>
+<p>Because we assume that line 8 and line 11 aren't executable, thus</p>
+<p>\[T(n)=c_1+c_2n+(c_3+c_4+c_9+c_{10})(n-1)+c_5\sum_{i=1}^{n-1}t_i+(c_6+c_7)\sum_{i=1}^{n-1}(t_i-1)\]</p>
+<p>Further simplify</p>
+<p>\[T(n)=(c_2+c_3+c_4+c_9+c_{10})n-(c_3+c_4+c_9+c_{10}-c_1)+c_5\sum_{i=1}^{n-1}t_i+(c_6+c_7)\sum_{i=1}^{n-1}(t_i-1)\]</p>
+<p>In this insertion sort, the best-case is to input a sorted array, then the line 5 just will execute for n-1 times, and the line 6, line 7,line 8 won't execute any more. We get the best-cast run time is :</p>
+<p>\[T(n)=(c_2+c_3+c_4+c_5+c_9+c_{10})n-(c_3+c_4+c_5+c_9+c_{10}-c_1)\]</p>
+<p>And obvious \(T(n)\) is a linear function, so we can use \(ax+b\) expressing \(T(n)\), because we only care the order of growth, when value of n is large, those lower-order terms and the constant coefficient of leading term are not important to our problem, so we ignore lower-order terms and the constant coefficient of leading term in the \(T(n)\) to left with \(n^2\), hence we say the insertion sort has a best-case run time of \(\Omega(n)\).</p>
+<p>The worst-case is to input a reverse sorted array, then : </p>
+<p>\[\sum_{i=1}^{n-1}t_i = \frac{(3+n)(n-1)}{2} = \frac{n^2+2n-3}{2}\]</p>
+<p>\[\sum_{i=1}^{n-1}(t_i-1) = \frac{(n+1)(n-1)}{2} = \frac{n^2-1}{2}\]</p>
+<p>\[c_5\sum_{i=1}^{n-1}t_i+(c_6+c_7)\sum_{i=1}^{n-1}(t_i-1)=(\frac{c_5}{2}+\frac{c_6}{2}+\frac{c_7}{2})n^2+c_5n-\frac{3c_5+c_6+c_7}{2}\]</p>
+<p>\[T(n)=(\frac{c_5}{2}+\frac{c_6}{2}+\frac{c_7}{2})n^2+(c_2+c_3+c_4+c_5+c_9+c_{10})n-(c_3+c_4+\frac{5c_5}{2}+\frac{c_6}{2}+\frac{c_7}{2}+c_9+c_{10}-c_1)\]</p>
+<p>Then we follow the above ignoring tenet, to left with \(n^2\), we could say insertion sort has the worst-case run time \(O(n^2)\), maybe you have found that I use the \(O\) instead of above \(\Omega\). yep, because they have different meaning.</p>
 
 </body>
 </html>
