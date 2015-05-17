@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Some Notes About Algorithm Complexity</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1>Some Notes About Algorithm Complexity</h1>
+<h3>Symbol appointment</h3>
+<ol>
+<li>&quot;=&quot; which follows the asymptotic notations for exaple \(O(g(n))\) is  representative of &quot;\(\in\)&quot;</li>
+<li>&quot;:&quot; a colon means “such that” within set notation</li>
+<li>\(\Theta\) big-theta</li>
+<li>\(O\) big-oh</li>
+<li>\(o\) little-theta</li>
+<li>\(\Omega\) big-omega</li>
+<li>\(\omega\) little-theta     </li>
+</ol>
+<h3>Asymptotic notation</h3>
+<p>I intend to explain three kinds of asymptotic notation including \(\Theta,O,\Omega\). Following will diplay both informalized definition and formalized definition. There also will talk about \(\omega\)-notation and \(\omicron\)-notation without detail.</p>
+<p>\(\Theta\) to describe asymptotic tight bound	</p>
+<p>\(O\) to describe asymptotic upper bound</p>
+<p>\(\Omega\) to describe asymptotic lower bound</p>
+<p>\(o\) to describe upper bound that is not asymptotically tight</p>
+<p>\(\omega\) to describe lower bound that is not asymptotically tight</p>
+<p><strong>These asymptotic notations aren't  privileges of algorithm complexity but apply to functions.</strong></p>
+<p>For example, the worst-case run time of insertion sort was \(T(n) = ax^2 + bx + c\), then this function can be writting as \(\Theta(n^2)\), hence \(\Theta(n^2)\) can characterize the worst-case run time of insertion sort.</p>
+<h3>How to count the run time of an algorithm</h3>
+<p>Let's see some specific case :</p>
+<p>This an insertion sort algorithm in c like programming language.</p>
+<p><em><strong>n</strong> is input size of this case</em></p>
+<p><em>\(c_i\) is the executing cost of line i</em></p>
+<p><em>\(t_i\) is executing times of in each different value i</em></p>
+<p><em><strong>T(n)</strong> is the total time of this insertion sort</em></p>
+<pre><code>0                                           cost    times
+1   int i = 1;                              c1      1
+2   for (; i &lt; n;) {                        c2      n
+3       key = a[i];                         c3      n-1
+4       j = i - 1;                          c4      n-1
+5       for (;j &gt;= 0 &amp;&amp; key &lt; a[j];){       c5      t1+t2+t3+...+t(n-1)
+6           a[j + 1] = a[j];                c6      (t1-1)+(t2-1)+...+(t(n-1)-1)
+7            j--;                           c7      (t1-1)+(t2-1)+...+(t(n-1)-1)
+8       }                                   c8      n-1
+9       a[j + 1] = key;                     c9      n-1
+10       i++;                               c10     n-1
+11  }                                       c11     n-1
+</code></pre>
+
+<p>\[T(n)=c_1+c_2n+c_3(n-1)+c_4(n-1)+c_5\sum_{i=1}^{n-1}t_i+c_6\sum_{i=1}^{n-1}(t_i-1)+c_7\sum_{i=1}^{n-1}(t_i-1)+c_8(n-1)+c_9(n-1)+c_{10}(n-1)+c_{11}(n-1)\]</p>
+<p>Because we assume that line 8 and line 11 aren't executable, thus</p>
+<p>\[T(n)=c_1+c_2n+(c_3+c_4+c_9+c_{10})(n-1)+c_5\sum_{i=1}^{n-1}t_i+(c_6+c_7)\sum_{i=1}^{n-1}(t_i-1)\]</p>
+<p>Further simplify</p>
+<p>\[T(n)=(c_2+c_3+c_4+c_9+c_{10})n-(c_3+c_4+c_9+c_{10}-c_1)+c_5\sum_{i=1}^{n-1}t_i+(c_6+c_7)\sum_{i=1}^{n-1}(t_i-1)\]</p>
+<p>In this insertion sort, the best-case is to input a sorted array, then the line 5 just will execute for n-1 times, and the line 6, line 7,line 8 won't execute any more. We get the best-cast run time is :</p>
+<p>\[T(n)=(c_2+c_3+c_4+c_5+c_9+c_{10})n-(c_3+c_4+c_5+c_9+c_{10}-c_1)\]</p>
+<p>And obvious \(T(n)\) is a linear function, so we can use \(ax+b\) expressing \(T(n)\), because we only care the order of growth, when value of n is large, those lower-order terms and the constant coefficient of leading term are not important to our problem, so we ignore lower-order terms and the constant coefficient of leading term in the \(T(n)\) to left with \(n^2\), hence we say the insertion sort has a best-case run time of \(\Omega(n)\).</p>
+<p>The worst-case is to input a reverse sorted array, then : </p>
+<p>\[\sum_{i=1}^{n-1}t_i = \frac{(3+n)(n-1)}{2} = \frac{n^2+2n-3}{2}\]</p>
+<p>\[\sum_{i=1}^{n-1}(t_i-1) = \frac{(n+1)(n-1)}{2} = \frac{n^2-1}{2}\]</p>
+<p>\[c_5\sum_{i=1}^{n-1}t_i+(c_6+c_7)\sum_{i=1}^{n-1}(t_i-1)=(\frac{c_5}{2}+\frac{c_6}{2}+\frac{c_7}{2})n^2+c_5n-\frac{3c_5+c_6+c_7}{2}\]</p>
+<p>\[T(n)=(\frac{c_5}{2}+\frac{c_6}{2}+\frac{c_7}{2})n^2+(c_2+c_3+c_4+c_5+c_9+c_{10})n-(c_3+c_4+\frac{5c_5}{2}+\frac{c_6}{2}+\frac{c_7}{2}+c_9+c_{10}-c_1)\]</p>
+<p>Then we follow the above ignoring tenet, to left with \(n^2\), we could say insertion sort has the worst-case run time \(O(n^2)\), maybe you have found that I use the \(O\) instead of above \(\Omega\). yep, because they have different meaning.</p>
+<p>We can make a conclusion from above content, we use the \(O\) to describe the worst-case and use \(\Omega\) to describe the best-case in algorithm complexity. however we use \(\Theta\) less, its meaning will be explain in following, this table and the graph should be useful to comprehend those notations for you.</p>
+<h3>Table and graph</h3>
+<table>
+<tr><td> \(T(n) = \frac{1}{4}(n-1)(n+2)\) </td><td>atual functon</td></tr>
+<tr><td> \(T(n)\in\Theta(n^2)\)</td><td>of order \(n^2\)</td></tr>
+<tr><td> \(T(n)\in O(n^2)\)</td><td>no more than order \(n^2\)</td></tr>
+<tr><td> \(T(n)\in\Omega(n^2)\)</td><td>no less than order \(n^2\)</td></tr>
+<tr><td> \(T(n)\in o(n^3)\)</td><td>smaller than order \(n^3\)</td></tr>
+</table>
+<h3>Formalized definition</h3>
+<p>\(\Theta(g(n))= \{f(n) : \exists c_1,c_2,n_1 \in Q^+ \bigwedge n \geq n_1\rightarrow 0 \leq c_1g(n) \leq f(n) \leq c_2g(n)\} \)</p>
+<p>\(O(g(n))= \{f(n) : \exists c_1,n_1 \in Q^+ \bigwedge n \geq n_1\rightarrow 0 \leq f(n) \leq c_1g(n)\} \)</p>
+<p>\(\Omega(g(n))= \{f(n) : \exists c_1,n_1 \in Q^+ \bigwedge n \geq n_1\rightarrow 0 \leq c_1g(g) \leq f(n)\} \)</p>
+<p>\(o(g(n))= \{f(n) : \forall c_1 &gt; 0,\exists n_1 &gt; 0 \bigwedge n \geq n_1\rightarrow 0 \leq f(n) &lt; c_1g(n)\} \)</p>
+<p>\(\omega(g(n))= \{f(n) : \forall c_1 &gt; 0,\exists n_1 &gt; 0 \bigwedge n \geq n_1\rightarrow 0 \leq c_1g(g) &lt; f(n)\} \)</p>
+<p>written in May, 17 2015 15 : 17</p>
+	<center>
+	<div  id = "comment_area_2">
+	    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'damhjame'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+	</center>
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
