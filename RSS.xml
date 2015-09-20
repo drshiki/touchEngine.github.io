@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
+<atom:link href="http://www.dam.moe/RSS.xml" rel="self" type="application/rss+xml" />
 <title>Dam's Blog</title>
 <link>http://www.dam.moe</link>
 <description>this my blog</description>
@@ -8,7 +9,7 @@
 <title>test title</title>
 <link>http://www.dam.moe/computer%20science/n%20must%20be%20congruent%20to%200%20or%201%20mod%204%20in%20an%20n-vertex%20self-complementary%20graph.html</link>
 <description>test de</description>
-<pubDate>2015-8-31 12:30:00</pubDate>
+<pubDate>Wed, 02 Oct 2002 08:00:00 EST</pubDate>
 </item>
 </channel>
 </rss>
