@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>Dam's Blog</title>
+<link>http://www.dam.moe</link>
+<description>this my blog</description>
+<item>
+<title>test title</title>
+<link>test link</link>
+<description>test de</description>
+<pubtime>20100303</pubtime>
+</item>
+</channel>
+</rss>
