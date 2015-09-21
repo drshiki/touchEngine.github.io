@@ -6,6 +6,16 @@
 		<link>http://www.dam.moe</link>
 		<description>this is a blog where will record my life, feelings, experence, etc :)</description>
 		<item>
+			<title>I don't use CSS in my blog for these reasons</title>
+			<link>http://www.dam.moe/culture/I don't use CSS in my blog for these reasons.html</link>
+			<description>
+				Some people asked me why I don't use CSS in my blog even some people tried to convince me to use it decorate these pages. 
+				it is necessary to write down this article to explain my thoughts...
+			</description>
+			<pubDate>Mon, 21 Sep 2015 21:18:28 +0800</pubDate>
+			<guid>http://www.dam.moe/culture/I don't use CSS in my blog for these reasons.html</guid>
+		</item>
+		<item>
 			<title>n must be congruent to 0 or 1 mod 4 in an n-vertex self-complementary graph</title>
 			<link>http://www.dam.moe/computer science/n must be congruent to 0 or 1 mod 4 in an n-vertex self-complementary graph.html</link>
 			<description>
@@ -13,7 +23,7 @@
 				of H are adjacent if and only if they are not adjacent in G, it means that one fills in all the missing edges required to form 
 				a complete graph, and removes all the edges that were previously there...
 			</description>
-			<pubDate>Fri, 18 Sept 2005 08:00:00 +0800</pubDate>
+			<pubDate>Fri, 18 Sep 2015 08:00:00 +0800</pubDate>
 			<guid>http://www.dam.moe/computer science/n must be congruent to 0 or 1 mod 4 in an n-vertex self-complementary graph.html</guid>
 		</item>
 		<item>
@@ -24,7 +34,7 @@
 				it is a pity I do not continue following their so called recommendation after sevral tries. because I felt that so hard for me 
 				at that time. fortunately I also met some people who gave me the really useful advice so that...
 			</description>
-			<pubDate>Fri, 11 Sept 2015 08:00:00 +0800</pubDate>
+			<pubDate>Fri, 11 Sep 2015 08:00:00 +0800</pubDate>
 			<guid>http://www.dam.moe/computer science/Don't start to learn a programming language by reading spec.html</guid>
 		</item>
 		<item>
@@ -36,7 +46,7 @@
 				value, and they are easily to be proved they can not be inverted in theory, owe it all to the prove method of existence of an 
 				inverse of an original function...
 			</description>
-			<pubDate>Tus, 08 Sept 2015 08:00:00 +0800</pubDate>
+			<pubDate>Tus, 08 Sep 2015 08:00:00 +0800</pubDate>
 			<guid>http://www.dam.moe/computer science/why is MD5 impossible to invert in theory, explaining by math.html</guid>
 		</item>
 	</channel>
