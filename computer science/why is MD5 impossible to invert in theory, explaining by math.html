@@ -7,7 +7,7 @@
 		<meta name="author" content="JameDam">
 		<meta name="keywords" content="JameDam, Dam, dam, Dam's Blog, dam.moe, touchengine, te">
 		<meta naem="description" content="well, master isn't at home, as you pleases, :-)">
-		<link rel="alternate" type="application/rss+xml" title="Dam's Blog" href="../rss.xml">
+		<link rel="alternate" type="application/rss+xml" title="Dam's Blog" href="http://www.dam.moe/rss.xml">
 	</head>
 	<body>
 		<h1><font face="Times New Roman,Impact,Comic Sans MS,Tahoma" color="#000000">Dam's Blog
@@ -25,21 +25,24 @@
 			</tr>
 		</table>
 		<hr size="2" width = "70%" align="left">
-		<div id ="content" width = "50%"><font face="Tahoma" size = "3">
+		<div id ="content"><font face="Tahoma" size = "3">
+		<table width="70%">
+		<tr><td>
 			<h3>why is MD5 impossible to invert in theory, explaining by math</h3>
-		<pre>  We usually hear that MD5 could not be inverted to get the input value by the hash value, because it is well know thing, 
-however have you known why that? whether it can be proved formally? MD5 is a kind of hash function to get fixed length hash 
-value, and they are easily to be proved they can not be inverted in theory, owe it all to the prove method of existence of an 
-inverse of an original function. 
-  We assume that MD5 can be inverted, then the each of the hash values reflects an unique input string, obviously it results false.
-folling is the function picture of MD5 hash function, because it is impossible that MD5 function is a monotone function in infinite 
-positive interval. from 62<sup>16</sup> to +&infin; each of all strings will be computed to get a hash value which in the set of hash value of 
-string 0 to string 62<sup>16</sup>.
-  So that we could come a conclusion that all hash functions which to get a fixed length hash value can be inverted and all they can
-discover collision in some conditions.
-</pre>
+			<p>We usually hear that MD5 could not be inverted to get the input value by the hash value, because it is well know thing, 
+			however have you known why that? whether it can be proved formally? MD5 is a kind of hash function to get fixed length hash 
+			value, and they are easily to be proved they can not be inverted in theory, owe it all to the prove method of existence of an 
+			inverse of an original function.</p>
+			<p>We assume that MD5 can be inverted, then the each of the hash values reflects an unique input string, obviously it results false.
+			folling is the function picture of MD5 hash function, because it is impossible that MD5 function is a monotone function in infinite 
+			positive interval. from 62<sup>16</sup> to +&infin; each of all strings will be computed to get a hash value which in the set of hash value of 
+			string 0 to string 62<sup>16</sup>.</p>
+			<p>So that we could come a conclusion that all hash functions which to get a fixed length hash value can be inverted and all they can
+			discover collision in some conditions.</p>
 		<img src="./md5 g1.png" alt="can not load pic">
-		</div></font>
+		</td></tr>
+		</table>
+		</font></div>
 		<hr size="2" width = "70%" align="left">
 <div id="disqus_thread"></div>
 <script type="text/javascript">
