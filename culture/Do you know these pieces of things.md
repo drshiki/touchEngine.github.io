@@ -10,4 +10,7 @@ the Harvard architecture isn't same level with Von Neumann architecture in a rel
 
 ![](relation_tree.png)
 
+"software engineering" this term was coined first by Anthony Oettinger and then the term was sponsored and facilitated by NATO.
+
+pointer isn't never exclusive for C or C++, actually, almost all the mainstream programming languages has pointer. 
 
