@@ -12,5 +12,6 @@ the Harvard architecture isn't same level with Von Neumann architecture in a rel
 
 "software engineering" this term was coined first by Anthony Oettinger and then the term was sponsored and facilitated by NATO.
 
-pointer isn't never exclusive for C or C++, actually, almost all the mainstream programming languages has pointer. 
+pointer isn't never exclusive for C or C++, actually, almost all the mainstream programming languages have pointer. 
 
+If you have any supplement, amendment or want to get above term's reference material or question about these article, please leave a comment or contact me te#dam.moe(replace # by @), put supplements with their source links or references, and, this page is a incessant update page. thx:)
