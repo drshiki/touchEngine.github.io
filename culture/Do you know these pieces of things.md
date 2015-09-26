@@ -14,4 +14,21 @@ the Harvard architecture isn't same level with Von Neumann architecture in a rel
 
 pointer isn't never exclusive for C or C++, actually, almost all the mainstream programming languages have pointer. 
 
+Nowadays the most common alternative style in the curly brace placement for the control statement (but not for function definition) is K&R style (originated in Kernighan and Plauger's *The Elements of Programming Style*) and Allman style (named after Eric Allman, and also known as "BSD style" since Allman wrote many of the utilities for BSD Unix). their respective example is as follow
+
+K&R style: opening brace at the same line as their respective control statement; closing brace remains in a line of itself
+	
+	while (i < 3) {
+		i++;
+	}
+
+Allman style: the brace of a control statement is on the next line, do likewise as K&R style, the closing brace is on a separate line
+
+	while (i < 3)
+	{
+		i++;	
+	}
+
+The first formal description of the waterfall model was cited in the article by Winston W. Royce, but this modal was presented as a flawed modal, many people followed this flawed modal, and, paid less attention to the iterative and incremental development which he advocated in this article.
+
 If you have any supplement, amendment or want to get above term's reference material or question about these article, please leave a comment or contact me te#dam.moe(replace # by @), put supplements with their source links or references, and, this page is a incessant update page. thx:)
