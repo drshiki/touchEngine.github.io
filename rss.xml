@@ -6,6 +6,15 @@
 		<link>http://www.dam.moe</link>
 		<description>this is a blog where will record my life, feelings, experence, etc :)</description>
 		<item>
+			<title>Do you know these pieces of things</title>
+			<link>http://www.dam.moe/computer science/Do you know these pieces of things.html</link>
+			<description>
+				knowledge in one sentence, and misunderstandings of traditional computer and its derived fields.
+			</description>
+			<pubDate>Sun, 27 Sep 2015 20:32:52 +0800</pubDate>
+			<guid>http://www.dam.moe/computer science/Do you know these pieces of things.html</guid>
+		</item>		
+		<item>
 			<title>I don't use CSS in my blog for these reasons</title>
 			<link>http://www.dam.moe/culture/I don't use CSS in my blog for these reasons.html</link>
 			<description>
