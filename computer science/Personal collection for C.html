@@ -1,0 +1,123 @@
+﻿<html>
+	<head>
+		<title>
+			Dam.Moe
+		</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="author" content="JameDam">
+		<meta name="keywords" content="JameDam, Dam, dam, Dam's Blog, dam.moe, touchengine, te">
+		<meta naem="description" content="well, master isn't at home, as you pleases, :-)">
+		<link rel="alternate" type="application/rss+xml" title="Dam's Blog" href="http://www.dam.moe/rss.xml">
+	</head>
+	<body>
+		<h1><font face="Times New Roman,Impact,Comic Sans MS,Tahoma" color="#000000">Dam's Blog
+			<a href="../rss.xml"><img src="../32px-Feed-icon.svg.png"></a>
+			<a href="https://github.com/login?return_to=%2FtouchEngine"><img src="../32px-Github-icon.png"></a>
+		</font></h1>
+		<table>
+			<tr>
+				<th><ul><li><font face = "Courier New,Tahoma" size="4"><a href="../computer science.html">computer science</a></font></li></ul></th>
+				<th><ul><li><font face = "Courier New,Tahoma" size="4"><a href="../culture.html">culture</a></font></li></ul></th>
+				<th><ul><li><font face = "Courier New,Tahoma" size="4"><a href="../health.html">health</a></font></li></ul></th>
+				<th><ul><li><font face = "Courier New,Tahoma" size="4"><a href="../recommendation.html">recommendation</a></font></li></ul></th>
+				<th><ul><li><font face = "Courier New,Tahoma" size="4"><a href="../mulife.html">mulife</a></font></li></ul></th>
+				<th><ul><li><font face = "Courier New,Tahoma" size="4"><a href="../profile.html">profile</a></font></li></ul></th>
+			</tr>
+		</table>
+		<hr size="2" width = "70%" align="left">
+		<div id ="content"><font face="Tahoma" size = "3">
+		<table width="70%">
+		<tr><td>
+			<h3>Personal collection for C</h3>
+			<p>This article is about some my study notes, and I write down these prevent forgetting when want to ues, and maybe this page
+			is useful for your work or interview of your ideal work or study for C, or not. whatever, it is worth remaining some thing for
+			for my study experience in C, and every topic description have a copy of compileable and executable code for any compiler meeting ANSI C99. 
+			and I will update this page continuedly.</p>
+			<p>exchange the two values of two variable without the temporary variable</p>
+			<pre>
+				#include &lt;stdio.h&gt;
+				int main()
+				{
+					int a=1,b=2;
+					b=a^b;
+					a=a^b;
+					b=a^b;
+					printf("a = %d, b = %d", a, b);//a = 2; b = 1
+					return 0;
+				}
+			</pre>
+			<p>get the file size through the standard funtions in a quickly way</p>
+			<pre>
+			#include &lt;stdio.h&gt;
+			int main()
+			{
+				FILE *fp = fopen("test.txt","r");
+				/* test.txt contains the following content 
+				 * hello world! this is a test file.
+				*/
+				
+				if(fp){
+					if(!fseek(fp, 0, SEEK_END))
+						printf("%ld", ftell(fp)); //the output is file size
+				}
+				
+				return 0;
+			}			
+			</pre>
+			<p>array's special repretentation</p>
+			<pre>
+			#include &lt;stdio.h&gt;
+			#include &lt;string.h&gt;
+			int main()
+			{
+				for(int i = 0; i < strlen("mary");i++)
+					printf("%c\t%c\n", "Mary"[i],i["Mary"]);
+				/* the output is folow
+				 * M    M
+				 * a    a
+				 * r    r
+				 * y    y
+				 */
+				return 0;
+			}
+			</pre>
+			<p>magical operator effect</p>
+			<pre>
+			#include &lt;stdio.h&gt;
+			int main()
+			{
+				int a = 10, b = 20;
+				printf("a = %d\n",-~a); // -~a == a+=1;
+				printf("b = %d\n",~-b); // ~-b == b-=1;
+				return 0;
+			}
+			</pre>
+		</td></tr>
+		</table>
+		</font></div>
+		<hr size="2" width = "70%" align="left">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'dammoe';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>		
+		<div id = "classify-by-month"><font size="2"><i>
+			<a href="">September 2015(0)</a>
+		</i></font></div>
+		
+		<footer><font face = "Tahoma,Courier New">
+			<a href="">Chinese version</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="">Japanese Version</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="">license</a></font> <br>
+			<font size = "2">touchengine.github.io(dam.moe) since 2014, version 0.3.0(09. 15 2015),contact by <b>te#dam.moe</b></font>
+		</footer>
+	</body>
+</html>
