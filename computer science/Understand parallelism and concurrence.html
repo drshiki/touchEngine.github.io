@@ -28,80 +28,19 @@
 		<div id ="content"><font face="Tahoma" size = "3">
 		<table width="70%">
 		<tr><td>
-			<h3>Personal collection for C</h3>
-			<p>This article is about some my study notes, and I write down these for preventing forgetting when want to ues, and maybe this page
-			is useful for your work or interview of your ideal work or study for C, or not. whatever, it is worth remaining some thing for
-			for my study experience in C, and every topic description have a copy of compileable and executable code for any compiler meeting ANSI C99. 
-			and I will update this page continuedly.</p>
-			<p>exchange the two values of two variable without the temporary variable</p>
-			<pre>
-				#include &lt;stdio.h&gt;
-				int main()
-				{
-					int a=1,b=2;
-					b=a^b;
-					a=a^b;
-					b=a^b;
-					printf("a = %d, b = %d", a, b);//a = 2; b = 1
-					return 0;
-				}
-			</pre>
-			<p>get the file size through the standard funtions in a quick way</p>
-			<pre>
-			#include &lt;stdio.h&gt;
-			int main()
-			{
-				FILE *fp = fopen("test.txt","r");
-				/* test.txt contains the following content 
-				 * hello world! this is a test file.
-				*/
-				
-				if(fp){
-					if(!fseek(fp, 0, SEEK_END))
-						printf("%ld", ftell(fp)); //the output is file size
-				}
-				
-				return 0;
-			}			
-			</pre>
-			<p>array's special repretentation</p>
-			<pre>
-			#include &lt;stdio.h&gt;
-			#include &lt;string.h&gt;
-			int main()
-			{
-				for(int i = 0; i < strlen("mary");i++)
-					printf("%c\t%c\n", "Mary"[i],i["Mary"]);
-				/* the output is folow
-				 * M    M
-				 * a    a
-				 * r    r
-				 * y    y
-				 */
-				return 0;
-			}
-			</pre>
-			<p>magical operator effect</p>
-			<pre>
-			#include &lt;stdio.h&gt;
-			int main()
-			{
-				int a = 10, b = 20;
-				printf("a = %d\n",-~a); // -~a == a+=1;
-				printf("b = %d\n",~-b); // ~-b == b-=1;
-				return 0;
-			}
-			</pre>
-			<p>left shift operator's equality</p>
-			<pre>
-			#include &lt;stdio.h&gt;
-			int main()
-			{
-				int a=7;
-				printf("a = %d", a<<4); // a << n == a*2^n;
-				return 0;
-			}			
-			</pre>
+			<h3>Understand parallelism and concurrence</h3>
+				<p>Note that this topic doesn't focus parallelism programming and concurrence programming but parallelism and concurrence.</p>
+
+				<p>Concurrency and parallelism are NOT the same thing, concurrency is often referred to as a property of a program or system, 
+				while prallelism is ofen cited to represent a behavior of a execution.</p>
+
+				<p>It is concurrency but not parmllelism in which at least two threads scheduled by OS or any scheduler running on one ordinary 
+				single-core processor.</p>
+
+				<p>Generally, parallelism occurs on multi-core, multi-processor or distributed systems.</p>
+
+				<p>Concurrence is based on more constant interruption,parallelism stands on non single-processor platform, and may means that 
+				concurrent threads execute at the same time on multi processor.</p>	
 		</td></tr>
 		</table>
 		</font></div>
