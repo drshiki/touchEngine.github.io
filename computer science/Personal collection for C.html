@@ -121,15 +121,15 @@
 				unsigned long num = N - 1LU;
 				clock_t start, end;
 				
-				memset(number, 1u, sizeof(bool)*(N+1));
-				number[1] = 0u;
+				memset(number, 1U, sizeof(bool)*(N+1));
+				number[1] = 0U;
 
 				start = clock();
 				
-				for (int i = 2; i <= N; i++){
+				for (unsigned long i = 2LU; i <= N; i++){
 					if(!number[i])
 						continue;
-					for (int j = 2; j*i <= N; j++){
+					for (unsigned long j = i; j*i <= N; j++){
 							if(number[j*i]){
 								number[j*i] = 0u;
 								num--;		
@@ -140,7 +140,7 @@
 				end = clock();
 				printf("from 2 to %lu has prime-count %lu, spends %f\n", N, num, (double)((end-start)/CLOCKS_PER_SEC));
 				return 0;
-			}			
+			}		
 			</pre>
 			<p>use OO in C</p>
 			<p>Occur Sine curve in CPU utilization</p>
