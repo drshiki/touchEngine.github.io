@@ -142,8 +142,72 @@
 				return 0;
 			}		
 			</pre>
-			<p>use OO in C</p>
+			<p>use higher order function by function pointer</p>
+			<pre>
+			#include &lt;stdio.h&gt;
+
+			void map(int *array, int length, int (*fun)(int))
+			{
+				for(int i =0; i < length; i++)
+					array[i] = fun(array[i]);
+			}
+
+			void print_array(int *array, int length){
+				for(int i = 0; i < length; i++)
+					printf("%d ",array[i]);
+				printf("\n");
+			}
+
+			int double_value(int num){
+				return num * 2;
+			}
+
+			int main()
+			{
+				int array[5] = {2,3,5,7,11};
+				print_array(array, 5);
+				map(array, 5, double_value);
+				print_array(array, 5);
+			}
+			</pre>
 			<p>Occur Sine curve in CPU utilization</p>
+			<p>currying in C(just for gcc extension)</p>
+			<pre>
+			#include &lt;stdio.h&gt;
+
+			typedef int (*one_var_func) (int);
+
+			one_var_func partial (int a) {
+				int g (int b) {
+					return a + b;
+				}
+				return g;
+			}
+
+			int main () {
+				int a = 3;
+				int b = 6;
+				one_var_func f = partial(a);
+				
+				printf ("%d\n", f(b));
+				
+				return 0;
+			}
+			</pre>
+			<p>judge the odd or the even</p>
+			<pre>
+			#include &lt;stdio.h&gt;
+			int main(){
+				int odd = 0, even = 0;
+				for (int i = 0; i<=100; i++){
+					if (i&1 == 1)
+						odd++;
+					else
+						even++;
+				}
+				return 0;
+			}
+			</pre>
 		</td></tr>
 		</table>
 		</div>
