@@ -31,10 +31,7 @@
 		<table width="70%">
 		<tr><td>
 			<h3>Personal collection for C</h3>
-			<p>This article is about some my study notes, and I write down these for preventing forgetting when want to ues, and maybe this page
-			is useful for your work or interview of your ideal work or study for C, or not. whatever, it is worth remaining some thing for
-			for my study experience in C, and every topic description have a copy of compileable and executable code for any compiler meeting ANSI C99. 
-			and I will update this page continuedly.</p>
+			<p>This article is about some my study notes, and I write down these for preventing forgetting when want to ues, and maybe this page is useful for your work or interview of your ideal work or study for C, or not. whatever, it is worth remaining some thing for my study experience in C, and every topic description have a copy of compileable and executable code for any compiler meeting ANSI C99(if not specific). and I will update this page continuedly.</p>
 			<p>exchange the two values of two variable without the temporary variable</p>
 			<pre>
 				#include &lt;stdio.h&gt;
@@ -170,7 +167,7 @@
 				print_array(array, 5);
 			}
 			</pre>
-			<p>Occur Sine curve in CPU utilization</p>
+			<p>occur Sine curve in CPU utilization</p>
 			<p>currying in C(just for gcc extension)</p>
 			<pre>
 			#include &lt;stdio.h&gt;
@@ -208,8 +205,9 @@
 				return 0;
 			}
 			</pre>
+			<p>quick sqrt</p>
 			<pre>
-			#include <stdio.h>
+			#include &lt;stdio.h&gt;
 
 			float Q_rsqrt(float number)
 			{ 
@@ -236,8 +234,9 @@
 				printf("%ld", Qsqrt(a));
 			}			
 			</pre>
+			<p>exchange two number' of hex</p>
 			<pre>
-			#include <stdio.h>
+			#include &lt;stdio.h&gt;
 			int main(){
 				int a = 0x16;
 				
@@ -247,14 +246,15 @@
 				return 0;
 			}				
 			</pre>
+			<p>get and output the PI</p>
 			<pre>
-			#include <stdio.h>
+			#include &lt;stdio.h&gt;
 
 			int a=10000,b,c=2800,d,e,f[2801],g;
 			main()
 			{
 				for(;b-c;)
-					f[b++]=a/5; 
+				f[b++]=a/5; 
 				for(;d=0,g=c*2;c-=14,printf("%.4d",e+d/a),e=d%a)
 				for(b=c;d+=f[b]*a, f[b]=d%--g, d/=g--,--b; d*=b){}
 			}
