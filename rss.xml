@@ -9,8 +9,7 @@
 			<title>Understand parallelism and concurrence</title>
 			<link>http://www.dam.moe/computer%20science/Understand%20parallelism%20and%20concurrence.html</link>
 			<description>
-				Concurrency and parallelism are NOT the same thing, concurrency is often referred to as a property of a program or system, 
-				while prallelism is ofen cited to represent a behavior of a execution.
+				Concurrency and parallelism are NOT the same thing, concurrency is often referred to as a property of a program or system, while prallelism is ofen cited to represent a behavior of a execution.
 			</description>
 			<pubDate>Sun, 11 Oct 2015 23:08:30 +0800</pubDate>
 			<guid>http://www.dam.moe/computer%20science/Understand%20parallelism%20and%20concurrence.html</guid>
@@ -19,8 +18,7 @@
 			<title>Personal collection for C</title>
 			<link>http://www.dam.moe/computer%20science/Personal%20collection%20for%20C.html</link>
 			<description>
-			This article is about some my study notes, and I write down these for preventing forgetting when want to ues, and maybe this page
-			is useful for your work or interview of your ideal work or study for C, or not.
+				This article is about some my study notes, and I write down these for preventing forgetting when want to ues, and maybe this page is useful for your work or interview of your ideal work or study for C, or not.
 			</description>
 			<pubDate>Sat, 10 Oct 2015 23:03:41 +0800</pubDate>
 			<guid>http://www.dam.moe/computer%20science/Personal%20collection%20for%20C.html</guid>
@@ -29,7 +27,7 @@
 			<title>Godel Escher Bach An Eternal Golden Braidthe my new soulfriend in next days</title>
 			<link>http://www.dam.moe/mulife/Godel%20Escher%20Bach%20An%20Eternal%20Golden%20Braidthe%20my%20new%20soulfriend%20in%20next%20days.html</link>
 			<description>
-				Godel Escher Bach An Eternal Golden Braidthe my new soulfriend in next days
+				Godel Escher Bach An Eternal Golden Braidthe my new soulfriend in next days.
 			</description>
 			<pubDate>Wed, 7 Oct 2015 22:27:57 +0800</pubDate>
 			<guid>http://www.dam.moe/mulife/Godel%20Escher%20Bach%20An%20Eternal%20Golden%20Braidthe%20my%20new%20soulfriend%20in%20next%20days.html</guid>
@@ -38,7 +36,7 @@
 			<title>Do you know these pieces of things</title>
 			<link>http://www.dam.moe/computer%20science/Do%20you%20know%20these%20pieces%20of%20things.html</link>
 			<description>
-				knowledge in one sentence, and misunderstandings of traditional computer and its derived fields.
+				Knowledge in one sentence, and misunderstandings of traditional computer and its derived fields.
 			</description>
 			<pubDate>Sun, 27 Sep 2015 20:32:52 +0800</pubDate>
 			<guid>http://www.dam.moe/computer%20science/Do%20you%20know%20these%20pieces%20of%20things.html</guid>
@@ -47,8 +45,7 @@
 			<title>I don't use CSS in my blog for these reasons</title>
 			<link>http://www.dam.moe/culture/I%20don't%20use%20CSS%20in%20my%20blog%20for%20these%20reasons.html</link>
 			<description>
-				Some people asked me why I don't use CSS in my blog even some people tried to convince me to use it decorate these pages. 
-				it is necessary to write down this article to explain my thoughts...
+				Some people asked me why I don't use CSS in my blog even some people tried to convince me to use it decorate these pages. it is necessary to write down this article to explain my thoughts...
 			</description>
 			<pubDate>Mon, 21 Sep 2015 21:18:28 +0800</pubDate>
 			<guid>http://www.dam.moe/culture/I%20don't%20use%20CSS%20in%20my%20blog%20for%20these%20reasons.html</guid>
@@ -57,9 +54,7 @@
 			<title>n must be congruent to 0 or 1 mod 4 in an n-vertex self-complementary graph</title>
 			<link>http://www.dam.moe/computer%20science/n%20must%20be%20congruent%20to%200%20or%201%20mod%204%20in%20an%20n-vertex%20self-complementary%20graph.html</link>
 			<description>
-				complement graph : the complement or inverse of a graph G is a graph H on the same vertices such that two distinct vertices 
-				of H are adjacent if and only if they are not adjacent in G, it means that one fills in all the missing edges required to form 
-				a complete graph, and removes all the edges that were previously there...
+				Complement graph : the complement or inverse of a graph G is a graph H on the same vertices such that two distinct vertices of H are adjacent if and only if they are not adjacent in G, it means that one fills in all the missing edges required to form a complete graph, and removes all the edges that were previously there...
 			</description>
 			<pubDate>Fri, 18 Sep 2015 08:00:00 +0800</pubDate>
 			<guid>http://www.dam.moe/computer%20science/n%20must%20be%20congruent%20to%200%20or%201%20mod%204%20in%20an%20n-vertex%20self-complementary%20graph.html</guid>
@@ -68,9 +63,7 @@
 			<title>Don't start to learn a programming language by reading spec</title>
 			<link>http://www.dam.moe/computer%20science/Don't%20start%20to%20learn%20a%20programming%20language%20by%20reading%20spec.html</link>
 			<description>
-				I met some people who always recommend me to read the language spec to start learn a language when I am a newbie in programming.
-				it is a pity I do not continue following their so called recommendation after sevral tries. because I felt that so hard for me 
-				at that time. fortunately I also met some people who gave me the really useful advice so that...
+				I met some people who always recommend me to read the language spec to start learn a language when I am a newbie in programming. it is a pity I do not continue following their so called recommendation after sevral tries. because I felt that so hard for me at that time. fortunately I also met some people who gave me the really useful advice so that...
 			</description>
 			<pubDate>Fri, 11 Sep 2015 08:00:00 +0800</pubDate>
 			<guid>http://www.dam.moe/computer%20science/Don't%20start%20to%20learn%20a%20programming%20language%20by%20reading%20spec.html</guid>
@@ -79,10 +72,7 @@
 			<title>why is MD5 impossible to invert in theory, explaining by math</title>
 			<link>http://www.dam.moe/computer%20science/why%20is%20MD5%20impossible%20to%20invert%20in%20theory,%20explaining%20by%20math.html</link>
 			<description>
-				We usually hear that MD5 could not be inverted to get the input value by the hash value, because it is well know thing, 
-				however have you known why that? whether it can be proved formally? MD5 is a kind of hash function to get fixed length hash 
-				value, and they are easily to be proved they can not be inverted in theory, owe it all to the prove method of existence of an 
-				inverse of an original function...
+				We usually hear that MD5 could not be inverted to get the input value by the hash value, because it is well know thing, however have you known why that? whether it can be proved formally? MD5 is a kind of hash function to get fixed length hash value, and they are easily to be proved they can not be inverted in theory, owe it all to the prove method of existence of an inverse of an original function...
 			</description>
 			<pubDate>Tue, 08 Sep 2015 08:00:00 +0800</pubDate>
 			<guid>http://www.dam.moe/computer%20science/why%20is%20MD5%20impossible%20to%20invert%20in%20theory,%20explaining%20by%20math.html</guid>

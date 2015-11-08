@@ -208,6 +208,57 @@
 				return 0;
 			}
 			</pre>
+			<pre>
+			#include <stdio.h>
+
+			float Q_rsqrt(float number)
+			{ 
+				long i;
+				float x2, y; 
+				const float threehalfs = 1.5F; 
+				x2 = number * 0.5F; 
+				y  = number;	
+				i = *(long*)&y;                       // evil floating point bit level hacking 
+				i = 0x5f3759df - (i >> 1);               // what the fuck? 
+				y = *(float*)&i;	
+				y = y * (threehalfs - (x2 * y * y));   // 1st iteration 
+				//	y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed 
+				return y; 
+			}
+
+			long Q_sqrt(long x) 
+			{ 
+				return x*Q_rsqrt(x)+0.5;
+			}
+
+			main(){
+				float a = 100;
+				printf("%ld", Qsqrt(a));
+			}			
+			</pre>
+			<pre>
+			#include <stdio.h>
+			int main(){
+				int a = 0x16;
+				
+				a=((a&0x0F)<<4 | (a&0xF0)>>4);
+				printf("%x",a);
+				
+				return 0;
+			}				
+			</pre>
+			<pre>
+			#include <stdio.h>
+
+			int a=10000,b,c=2800,d,e,f[2801],g;
+			main()
+			{
+				for(;b-c;)
+					f[b++]=a/5; 
+				for(;d=0,g=c*2;c-=14,printf("%.4d",e+d/a),e=d%a)
+				for(b=c;d+=f[b]*a, f[b]=d%--g, d/=g--,--b; d*=b){}
+			}
+			</pre>
 		</td></tr>
 		</table>
 		</div>
