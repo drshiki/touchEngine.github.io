@@ -259,6 +259,19 @@
 				for(b=c;d+=f[b]*a, f[b]=d%--g, d/=g--,--b; d*=b){}
 			}
 			</pre>
+			whether the number is 2<sup>n</sup> (n >= 0)
+			<pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int x;
+				scanf("%d",&x);
+				if(x&(x-1) == 0)
+					puts("yes");
+				else
+					puts("no");
+				return 0;
+			}
+			</pre>
 		</td></tr>
 		</table>
 		</div>
