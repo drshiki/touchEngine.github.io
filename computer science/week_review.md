@@ -61,3 +61,18 @@ he takes the book and the bag which his mother bought for him going to school
 above sentence, token = 16 and type = 13 for that 'he', 'his', and 'him' have same lamma, so are first 'the' and second 'the'.
 
 we use the N to represent number of tokens, V to represent the vocabulary the set of types. and |V| is the size of the vocabulary.
+
+word tokenization in Chinese
+
+Maximum matching（MM），whereas MM isn't generally good algorithm in English because English has many long words，but the Chinese word average long is 2.4 character
+
+and the MM is rough ,it will be hard such as the sentence 
+
+好好学习 can segmentate to 好/好/学习,好/好学/习/, here is ambiguous，and we call these sutiation as crossing ambiguity or
+  overlapping ambiguity，a extented example is 提高产品质量, the right one of course 提高/产品/质量, but it seens to segmentate to 提/高产/品质/量 or 提高/产/品质/量. one of this method improvement is least words segmentation, note : MM is not away the least words segmentation, such “独立自主／和平／等／互利／的／原则” is the MM method have six words；but the least is “独立自主／和／平等互利／的／原则” five words. one better is the easity way in probabliti unigram model. but all above can not solve the combinatorial ambiguity，means that the same string in different sentence or context may segmentate and may not be segmentate，such in Chinese 个人 in 个人情操 is one word but in 这个人喜欢西红柿，个人 is tow single character word， and 才能，难过，就业 so on  
+
+基于词典的匹配 
+
+基于字的标注 
+
+基于理解
