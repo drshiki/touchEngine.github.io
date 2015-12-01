@@ -272,6 +272,34 @@
 				return 0;
 			}
 			</pre>
+			<p>find the sub-array with the largest sum</p>
+			<pre>
+			#include &lt;stdio.h&gt;
+			struct SubArr{
+				int start_subscript;
+				int end_subscript;
+				int sum;
+			};
+			int main(){
+				struct SubArr max = {0,0,0};
+				struct SubArr temp = {0,0,0};
+				int a[] = {1, -2, 3, 10, -4, 7, 2, -5};
+				
+				for(int i = 0; i &lt; 8; i++){
+					if(temp.sum &lt; 0){
+						temp.start_subscript = temp.end_subscript = i;
+						temp.sum = a[i];
+					}else{
+						temp.sum += a[i];
+						temp.end_subscript = i;
+					}
+					if(temp.sum &gt; max.sum)
+						max = temp;
+				
+				}
+				printf("the max sum is %d, the max sub array from %d to %d", max.sum,max.start_subscript,max.end_subscript);
+			}			
+			</pre>
 		</td></tr>
 		</table>
 		</div>
