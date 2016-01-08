@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>
+			Dam.Moe
+		</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="author" content="JameDam">
+		<meta name="keywords" content="JameDam, Dam, dam, Dam's Blog, dam.moe, touchengine, te">
+		<meta name="description" content="well, master isn't at home, as you pleases, :-)">
+		<link rel="alternate" type="application/rss+xml" title="Dam's Blog" href="http://www.dam.moe/rss.xml">		
+	</head>
+	<body>
+		<h1><font face="Times New Roman,Impact,Comic Sans MS,Tahoma" color="#000000">Dam's Blog
+			<a href="../rss.xml"><img src="../32px-Feed-icon.svg.png" alt="../32px-Feed-icon.svg.png"></a>
+			<a href="https://github.com/login?return_to=%2FtouchEngine"><img src="../32px-Github-icon.png" alt="../32px-Github-icon.png"></a>		
+		</font></h1>
+		<table>
+			<tr>
+				<th><ul><li><font face = "Courier New,Tahoma" size="4"><a href="../computer science.html">computer science</a></font></li></ul></th>
+				<th><ul><li><font face = "Courier New,Tahoma" size="4"><a href="../culture.html">culture</a></font></li></ul></th>
+				<th><ul><li><font face = "Courier New,Tahoma" size="4"><a href="../health.html">health</a></font></li></ul></th>
+				<th><ul><li><font face = "Courier New,Tahoma" size="4"><a href="../reading list.html">reading list</a></font></li></ul></th>
+				<th><ul><li><font face = "Courier New,Tahoma" size="4"><a href="../mulife.html">mulife</a></font></li></ul></th>
+				<th><ul><li><font face = "Courier New,Tahoma" size="4"><a href="../profile.html">profile</a></font></li></ul></th>
+			</tr>
+		</table>
+		<hr size="2" width = "70%" align="left">
+		<div id ="content">
+		<table width="70%">
+		<tr><td>
+			<h3>Algorithm to get max and min at same time</h3>
+			<p>Yesterday I saw a problem which requires the maximum and minimum of an array, we have a solution with 2(n-1) times comparison, but we need a less comparison times' algorithm. I think most people come up with the solution held the  complexity 2n below in the first time they meet the problem:</p>
+			<pre>
+	max = min = a[1];
+	for i from 2 to n:
+		if (max < a[i]):
+			max = a[i];
+		if (min > a[i]):
+			min = a[i];		
+			</pre>
+			<p>This algorithm conducts the 2(n-1) times of comparison. We use the C to represent the amount of the comparisons, then we get that C<sub>best</sub> = C<sub>avg</sub> = C<sub>worst</sub> = 2(n-1), it was a terrible solution in practical engineering, however, from my point of view, this kind of brute force algorithms would be good start points. Let's try to optimize the algorithm, because the similar process between getting the maximum and getting the minimum, I would think whether I can use some information come from previous process, after learning the KMP algorithm I knew that I could omit some unnecessary steps when we have gotten some information in the first process, this thinking is important, many other algorithms also contain this thinking generally. Back to this problem, look at the code it is easy to find out the fact that if max < a[i] then the condition a[i] >= min must true, so we needn't compare a[i] and min when max < a[i], now we get the initial optimizing:</p>
+			<pre>
+	max = min = a[1];
+	for i from 2 to n:
+	    if (max < a[i]):
+	        max = a[i];
+	    else：
+	        if (min > a[i]):
+	            min = a[i];			
+			</pre>
+			<p>The above holds the C<sub>avg</sub> = C<sub>best</sub> = (n-1)+(n-1)/2=(3(n-1))/2, and the worst circumstance 2(n-1), later I found a better algorithm which keeps the comparison times C<sub>avg</sub> = (3(n-2))/2+1 when the n-1 is odd and C<sub>avg</sub>=(3(n-1))/2 when the n-1 is even, the algorithm at first comparison doesn‘t compare the initial max(min) with the next number, it firstly does compare between the next two numbers, then does compare between the max and the bigger one of the two numbers, does compare between the min and the smaller one, the detail is written in following:</p>
+			<pre>
+	max = min = a[1];
+	int start = 2;
+	if((n-1)%2 == 1)://different handlings of the odd and even 
+	    if(a[2] > max)://this is one of time of comparison
+	        max = a[2];
+	    else:
+	        min = a[2];
+	    start = 3;
+	for i from stat to n by step 2:
+	    if(a[i]>a[i+1]):
+	        temp_max = a[i]；
+	        temp_min = a[i+1];
+	    else
+	        temp_min = a[i+1];
+	        temp_min = a[i];
+	    if(max < temp_max):
+	        max = temp_max;
+	    if(min < temp_min):
+	        min = temp_min;			
+			</pre>
+			<p>Actually, you can get the biggest and the smallest of next three numbers to compare the max and the min, and it also works better than the first solution but worse than when we choose the two numbers.</p>
+			<p>This problem have solved coming here, but I don't write all the reasoning process and thinking in this article for that I can not link every points, probably I am still poor in knowledge. According to this, I have a long way to go in my study.</p>
+		</td></tr>
+		</table>
+		</div>
+		<hr size="2" width = "70%" align="left">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'dammoe';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>		
+		<div id = "classify-by-month"><font size="2"><i>
+			<a href="">Sep 2015(5)</a>
+			<a href="">Oct 2015(0)</a>
+		</i></font></div>
+		
+		<div><font face = "Tahoma,Courier New">
+			<a href="">Chinese version</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="">Japanese Version</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="">license</a></font> <br>
+			<font size = "2">touchengine.github.io(dam.moe) since 2014, version 0.3.0(09. 15 2015),contact by <b>te#dam.moe</b></font>
+		</div>
+	</body>
+</html>
