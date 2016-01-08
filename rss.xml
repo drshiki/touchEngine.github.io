@@ -6,6 +6,15 @@
 		<link>http://www.dam.moe</link>
 		<description>this is a blog where will record my life, feelings, experence, etc :)</description>
 		<item>
+			<title>Algorithm to get max and min at same time</title>
+			<link>http://www.dam.moe/computer%20science/Algorithm%20to%20get%20max%20and%20min%20at%20same%20time</link>
+			<description>
+				A problem which requires the maximum and minimum of an array, we have a solution with 2(n-1) times comparison, but we need a less comparison times' algorithm...
+			</description>
+			<pubDate>Sat, 8 Jan 2016 21:07:03 +0800</pubDate>
+			<guid>http://www.dam.moe/computer%20science/Algorithm%20to%20get%20max%20and%20min%20at%20same%20time</guid>
+		</item>	
+		<item>
 			<title>Diet and other notes about cold</title>
 			<link>http://www.dam.moe/health/Diet%20and%20other%20notes%20about%20cold.html</link>
 			<description>
