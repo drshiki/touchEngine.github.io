@@ -1,1 +1,0 @@
- Freehand notes: head drawing

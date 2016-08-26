@@ -1,1 +1,0 @@
-#Can redefine a C standard lib function？
