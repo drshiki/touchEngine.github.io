@@ -9,13 +9,14 @@
 
 # 项目经历
 
-### 基于mmseg及HMM的汉语分词系统 2015~2016
-### toyer搜索引擎 2016
+### chseg汉语分词系统 2015~2016
+### toyer搜索引擎 2016 （未完成）
 ### 基于raspberry pi的室内环境监测 2015
 ### php non-framework CMS 2015
 
 # 论文&翻译
-### XML namespace
+### 翻译：Namespaces in XML 1.0 (Third Edition)
+### 论文：A Chinese word segmentation system which combines rules and statistic method
 
 # 感兴趣的方向
 
@@ -25,14 +26,13 @@
 + 移动开发/安卓
 
 # 技能清单
-
++ 技能栈： C/java/python/php/js
 + Web开发：PHP/java
-+ Web框架：ThinkPHP/SSH
 + 前端框架：Bootstrap
-+ 前端工具：Bower/Gulp/SaSS/LeSS/PhoneGap
 + 数据库相关：MySQL/SQLserver/SQLite
 + 版本管理：git
 + 单元测试：junit
++ 其他：算法/文本挖掘/聚类/爬虫
 
 # 联系信息
 
